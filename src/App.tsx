@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Checkbox } from './components/checkbox/Checkbox';
-import { TotalPrice } from './components/total/TotalPrice';
+
 import { Title } from './components/title/Title';
 import { Navbar } from './components/navbar/Navbar';
 import { Page } from './components/page/Page';
+import { TotalPrice } from './components/total/TotalPrica';
 
 export const App: React.FC = () => {
   const services = [
@@ -14,6 +15,8 @@ export const App: React.FC = () => {
 
   const [selectedServices, setSelectedServices] = useState<number[]>([]);
   const [pageCost, setPageCost] = useState<number>(0);
+
+  
 
   const handleCheckboxChange = (index: number) => {
     setSelectedServices((prev) =>
