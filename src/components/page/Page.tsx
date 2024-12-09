@@ -37,7 +37,7 @@ export const Page: React.FC<PageProps> = ({ onCostChange }) => {
   }
 
   return (
-    <div className="border-gray-300 {
+    <div className="border-gray-300 
         flex flex-col gap-4 border p-4 rounded-lg shadow-xl">
       <div className="flex items-center justify-between">
         <label htmlFor="pages">Número de páginas:</label>
