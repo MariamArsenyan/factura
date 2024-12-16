@@ -12,7 +12,7 @@ export const WelcomePage = () => {
         Solicita tu presupuesto en unos simples pasos y obtén una propuesta <br />
         para destacar en el mundo digital
         </h2>
-        <button className="button h-10 w-4/12  px-2  m-3 border border-grey rounded-full bg-indigo-600 text-white text-base" >
+        <button className="button h-10 w-4/12  px-2  m-3 border border-grey rounded-full bg-indigo-600 text-white text-base animate-pulse" >
             <Link to='/home'>Solicita tu presupuesto</Link>
         </button>
     </div>

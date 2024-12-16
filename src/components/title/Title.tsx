@@ -3,7 +3,7 @@ export const Title = () => {
     <div className="relative h-28 bg-white flex items-center justify-center flex-col w-3/6 rounded-lg p-4 text-[0.8125rem]/5 shadow-xl shadow-black/5 ring-2 ring-indigo-600 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <img
-          src="https://media.istockphoto.com/id/1398921279/es/vector/consultor%C3%ADa-de-plan-de-negocios-para-an%C3%A1lisis-financiero-estad%C3%ADsticas-o-desarrollo-para-el.jpg?s=2048x2048&w=is&k=20&c=JUACB8D5MRbpTB-aqbou__1XT6KesN8ipy8TkiYy7uo=" // Замените на нужный URL изображения
+          src="https://media.istockphoto.com/id/1398921279/es/vector/consultor%C3%ADa-de-plan-de-negocios-para-an%C3%A1lisis-financiero-estad%C3%ADsticas-o-desarrollo-para-el.jpg?s=2048x2048&w=is&k=20&c=JUACB8D5MRbpTB-aqbou__1XT6KesN8ipy8TkiYy7uo="
           alt="decor"
           className="absolute top-2 left-5 opacity-30 max-w-[10%]"
         />
