@@ -3,8 +3,8 @@
 Este es un proyecto increíble. Aquí puedes ver cómo se ve la aplicación:
 
 ![Pantalla de la aplicación](././src/assets/screen1.png)
-(././src/assets/screen2.png)
-(././src/assets/screen3.png)
+![Pantalla de la aplicación](././src/assets/screen2.png)
+![Pantalla de la aplicación](././src/assets/screen3.png)
 
 ## Instrucciones de instalación
 
