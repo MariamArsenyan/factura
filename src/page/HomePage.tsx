@@ -1,5 +1,5 @@
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom"; // Aquí usamos useNavigate
 import { Checkbox } from "../components/Checkbox";
 import { Navbar } from "../components/Navbar";
 import { Page } from "../components/Page";
@@ -21,6 +21,26 @@ export const HomePage: React.FC = () => {
     const [showBudgetList, setShowBudgetList] = useState(false); 
     const [isAnnual, setIsAnnual] = useState<boolean>(false); 
     const [currentDate] = useState<string>(new Date().toISOString());
+    
+    const location = useLocation();
+    const navigate = useNavigate(); 
+
+    useEffect(() => {
+        const params = new URLSearchParams(location.search);
+        services.forEach((_, index) => {
+            if (selectedServices.includes(index)) {
+                params.set(`service${index}`, 'true');
+            } else {
+                params.delete(`service${index}`);
+            }
+        });
+        params.set('WebPage', pageCost ? 'true' : 'false');
+        params.set('CampaignSeo', selectedServices.includes(0) ? 'true' : 'false');
+        params.set('pages', pageCost.toString());
+        params.set('lang', '2'); 
+
+        navigate({ search: params.toString() }); 
+    }, [selectedServices, pageCost, location.search, navigate]);
 
     const handleCheckboxChange = (index: number) => {
         setSelectedServices((prev) =>
@@ -50,7 +70,7 @@ export const HomePage: React.FC = () => {
         <BudgetProvider>
             <div className="p-5 flex flex-col items-center max-w-full max-h-full gap-11">
                 <Navbar />
-                <Title/>
+                <Title />
                 <SaleButton
                     isAnnual={isAnnual}
                     salePrice={salePrice}

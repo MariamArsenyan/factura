@@ -6,7 +6,7 @@ interface SaleButtonProps {
   saleAnnual: () => void; 
 }
 
-export const SaleButton: React.FC<SaleButtonProps> = ({ isAnnual, salePrice, saleAnnual }) => {
+export const SaleButton: React.FC<SaleButtonProps> = ({ isAnnual, saleAnnual }) => {
     return (
       <div className="form-control flex items-center justify-center py-5 flex-col">
         <div className="flex items-center gap-4">
