@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 import { useState } from 'react';
@@ -7,15 +6,18 @@ import { FaArrowRightLong } from 'react-icons/fa6';
 
 interface DataProps {
     totalPrice: number;
+    date:string;
     selectedServices: string[];
     resetServices: () => void;
-    onShowBudgetList: () => void; // Nueva prop
+    onShowBudgetList: () => void;
+    sortByDate: () => void;
 }
 
 export const Client: React.FC<DataProps> = ({ totalPrice, selectedServices, resetServices, onShowBudgetList }) => {
     const [clientName, setClientName] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
     const [mailName, setMailName] = useState('');
+    const [sortByDate, setSortByDate] = useState('');
     const { addBudget } = useBudget();
 
     const handleAddBudget = (e: React.FormEvent) => {
@@ -31,20 +33,24 @@ export const Client: React.FC<DataProps> = ({ totalPrice, selectedServices, rese
             phoneNumber,
             mailName,
             totalPrice,
+            date: new Date,
             services: selectedServices,
+            isAnnual: false,
+            
         };
 
         addBudget(newBudget);
         setClientName('');
         setPhoneNumber('');
         setMailName('');
+        setSortByDate('');
         resetServices();
         onShowBudgetList();
     };
 
     return (
         <div className="client border-gray-300 flex flex-col gap-4 border p-4 rounded-lg shadow-xl">
-            <h1 className="font-bold text-lg text-black">Demanar pressupost</h1>
+            <h1 className="font-bold text-lg text-black">Solicitar presupuesto</h1>
             <form onSubmit={handleAddBudget} className="flex gap-4 mt-4">
                 <label>
                     <input

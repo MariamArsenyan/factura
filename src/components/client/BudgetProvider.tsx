@@ -6,6 +6,8 @@ interface BudgetProps {
     mailName: string;
     totalPrice: number;
     services: string[];
+    date: Date;
+    isAnnual: boolean
 }
 
 interface BudgetContextProps {
@@ -36,3 +38,5 @@ export const useBudget = () => {
     }
     return context;
 };
+
+

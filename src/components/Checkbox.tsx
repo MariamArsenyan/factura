@@ -28,7 +28,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({ label, text, price, isChecke
             onChange={onChange}
             className="w-3 h-3 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
           />
-          Afegir 
+          Añadir 
         </label>
       </div>
     </div>
